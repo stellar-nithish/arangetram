@@ -1,5 +1,6 @@
 import React from 'react';
 import content from '../data/content.json';
+import SocialLinks from './SocialLinks';
 
 const About = () => {
   const { about, images } = content;
@@ -45,6 +46,11 @@ const About = () => {
                 </li>
               ))}
             </ul>
+          </div>
+          
+          <div className="mt-8">
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">Connect with Sanjana</h4>
+            <SocialLinks />
           </div>
         </div>
         

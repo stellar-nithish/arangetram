@@ -59,5 +59,11 @@
       "/src/assets/images/photo_7.jpg",
       "/src/assets/images/photo_9.jpg"
     ]
+  },
+  "socials": {
+    "spotify": "https://open.spotify.com/show/4R1MPVZrdwkk1Sjd9lAWKG?si=fa9c76c54a1540d6&nd=1&dlsi=61c533c035654f18",
+    "instagram": "https://www.instagram.com/sfhs_joi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D",
+    "linkedin": "https://www.linkedin.com/in/sanjana-diddige/",
+    "email": "mailto:sdiddige@gmail.com"
   }
 }
