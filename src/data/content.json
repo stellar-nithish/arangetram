@@ -1,0 +1,63 @@
+{
+  "home": {
+    "greeting": "",
+    "title": "I'm Sanjana Diddige",
+    "description": "I’m a passionate student with a strong focus on Law, Government, and Public Service. With a deep commitment to making a positive impact, I strive to contribute meaningfully to my community and beyond."
+  },
+  "about": {
+    "title": "About Sanjana",
+    "content": [
+      "Through my journey, I aim to blend my academic pursuits with hands-on experiences to shape a brighter, more equitable future.",
+      "My passion spans public speaking, leadership, community engagement, law and government.",
+      "I am a Rising High Schooler, Junior Optimist International Lt. Governor, Intern at Forsyth County Probate Court, and emerging leader at Kruti Dance Academy."
+    ],
+    "highlights": [
+      "Top-10 State Mock Trial (Lead Attorney)",
+      "4 National/International Recognition",
+      "Expand youth civic engagement",
+      "Use tech + policy to improve local government services"
+    ]
+  },
+  "arangetram": {
+    "eventDetails": {
+      "title": "My Arangetram",
+      "date": "TBD - Coming Soon",
+      "time": "TBD",
+      "venue": "TBD",
+      "description": "An Arangetram is not just the beginning of a solo journey in dance, but a devotion to the art form. This margam is an expression of poetry of the body, song of the soul, and spirit."
+    },
+    "segments": [
+      {
+        "title": "First Segment",
+        "content": "The message of Brahmamokkate—that whether king or pauper, man or woman, sage or sinner, all are equal before God, aligns perfectly with what I wish to express... honoring divine equality in everyone."
+      },
+      {
+        "title": "Second Segment",
+        "content": "Shifts into deeper abhinaya, where storytelling and emotion take center stage. With the Mahabharat Shabdam, I step into the vast world of epic narrative, embodying character and moral dilemmas. The Varnam, the longest and most demanding piece, becomes the emotional heart of my margam."
+      },
+      {
+        "title": "Third Segment",
+        "content": "The most personal expression. A self-choreographed piece dedicated to Lord Shiva... followed by the Tillana which bursts forth with joy and rhythm, and finally the Mangalam to offer gratitude to my guru, the divine, and the audience."
+      },
+      {
+        "title": "Special Dedication",
+        "content": "I also hope to present Aigiri Nandini as a Durga Keertanam. This hymn to Goddess Durga is special to me because it is tied so deeply to my mother’s childhood... sharing the stage with my mom will be an unforgettable moment."
+      }
+    ]
+  },
+  "images": {
+    "hero": [
+      "/src/assets/images/photo_1.png"
+    ],
+    "heroDesktop": "/src/assets/images/photo_8.jpg",
+    "about": "/src/assets/images/photo_2.png",
+    "gallery": [
+      "/src/assets/images/photo_3.png",
+      "/src/assets/images/photo_4.jpg",
+      "/src/assets/images/photo_5.png",
+      "/src/assets/images/photo_6.jpg",
+      "/src/assets/images/photo_7.jpg",
+      "/src/assets/images/photo_9.jpg"
+    ]
+  }
+}

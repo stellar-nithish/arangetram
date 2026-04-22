@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #800000; /* Maroon */
+  --color-primary-light: #9c1f1f;
+  --color-secondary: #FFD700; /* Gold */
+  --color-accent: #F5F5DC; /* Beige */
+  --color-dark: #2C1818;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+/* Base styles for smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
