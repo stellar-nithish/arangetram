@@ -5,15 +5,16 @@ import About from '../components/About';
 import Gallery from '../components/Gallery';
 import RSVP from '../components/RSVP';
 import SocialLinks from '../components/SocialLinks';
+import AnimateOnScroll from '../components/AnimateOnScroll';
 
 const Home = () => {
   return (
     <div className="relative">
       <Hero />
-      <EventDetails />
-      <About />
-      <Gallery />
-      <RSVP />
+      <AnimateOnScroll><EventDetails /></AnimateOnScroll>
+      <AnimateOnScroll><About /></AnimateOnScroll>
+      <AnimateOnScroll><Gallery /></AnimateOnScroll>
+      <AnimateOnScroll><RSVP /></AnimateOnScroll>
       
       {/* Footer */}
       <footer className="bg-dark text-accent py-12 text-center border-t-4 border-primary">
