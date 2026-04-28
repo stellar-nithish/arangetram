@@ -65,5 +65,229 @@
     "instagram": "https://www.instagram.com/sfhs_joi?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D",
     "linkedin": "https://www.linkedin.com/in/sanjana-diddige/",
     "email": "mailto:sdiddige@gmail.com"
+  },
+  "writingSpeaking": {
+    "essays": [
+      {
+        "id": "dar-essay",
+        "eyebrow": "National Winner",
+        "title": "DAR American History Essay Contest",
+        "description": "Awarded the national prize by the Daughters of the American Revolution — competing against thousands across the country on pivotal moments in American history.",
+        "tags": ["National Winner", "History", "DAR"],
+        "links": [
+          { "label": "DAR Website", "url": "https://www.dar.org/national-society/scholarships/american-history-essay-contest", "type": "external" }
+        ]
+      },
+      {
+        "id": "ncss-prize",
+        "eyebrow": "National Winner",
+        "title": "NCSS 1787 Prize",
+        "description": "Recognized by the National Council for the Social Studies for outstanding scholarship in civics and constitutional history at the national level.",
+        "tags": ["National Winner", "Civics", "NCSS"],
+        "links": [
+          { "label": "NCSS Website", "url": "https://www.socialstudies.org", "type": "external" }
+        ]
+      },
+      {
+        "id": "john-locke",
+        "eyebrow": "International",
+        "title": "John Locke Institute — Global Essay Prize",
+        "description": "Shortlisted in one of the world's most competitive international essay competitions, drawing submissions from students in over 80 countries.",
+        "tags": ["International", "Philosophy", "Shortlisted"],
+        "links": [
+          { "label": "John Locke Institute", "url": "https://www.johnlockeinstitute.com/essay-competition", "type": "external" }
+        ]
+      },
+      {
+        "id": "jfk-essay",
+        "eyebrow": "National Participant",
+        "title": "JFK Profile in Courage Essay Contest",
+        "description": "Selected to participate in the prestigious JFK Library Foundation contest honoring students who write compellingly about political courage and moral leadership.",
+        "tags": ["National", "JFK", "Civic Leadership"],
+        "links": [
+          { "label": "JFK Library", "url": "https://www.jfklibrary.org/learn/education/profile-in-courage-essay-contest", "type": "external" }
+        ]
+      },
+      {
+        "id": "rotary-essay",
+        "eyebrow": "Award",
+        "title": "Rotary Club Essay Contest — Winner",
+        "description": "Won the Rotary Club essay competition, recognizing civic-focused student writing that addresses real-world community challenges and public service.",
+        "tags": ["Winner", "Rotary", "Community"],
+        "links": []
+      },
+      {
+        "id": "patriots-essay",
+        "eyebrow": "Recognition",
+        "title": "Patriots of the American Revolution Essay",
+        "description": "Recognized for an essay exploring the legacy of the American Revolution and its lasting influence on democratic principles and civic responsibility.",
+        "tags": ["Recognition", "History", "Revolution"],
+        "links": []
+      }
+    ],
+    "publications": [
+      {
+        "id": "coleman-legal",
+        "title": "Legal Insight: Youth Perspectives on Civic Law",
+        "organization": "Coleman Legal Group",
+        "description": "Contributed a civic law piece for Coleman Legal Group's publication, offering a student's perspective on the intersection of youth advocacy and legal systems.",
+        "link": { "label": "Visit Coleman Legal", "url": "https://www.colemanlegalgroupllc.com", "type": "external" }
+      },
+      {
+        "id": "ncss-blog",
+        "title": "NCSS Student Spotlight — 1787 Prize Essay",
+        "organization": "National Council for Social Studies",
+        "description": "Essay featured on the NCSS platform as part of the 1787 Prize recognition, reaching educators and students nationwide.",
+        "link": { "label": "Visit NCSS", "url": "https://www.socialstudies.org", "type": "external" }
+      },
+      {
+        "id": "sfhs-feature",
+        "title": "Forsyth County Schools — Student Recognition Feature",
+        "organization": "Forsyth County Schools",
+        "description": "Featured in official Forsyth County Schools communications for earning global writing recognition, highlighting her achievements to the wider school community.",
+        "link": { "label": "Forsyth County Schools", "url": "https://www.forsyth.k12.ga.us", "type": "external" }
+      }
+    ],
+    "speaking": [
+      {
+        "id": "joi-lt-gov",
+        "role": "Elected Speaker",
+        "roleColor": "#800000",
+        "event": "Junior Optimist International — Lt. Governor Address",
+        "description": "Delivered district-wide leadership addresses to JOI club chapters, guiding youth on civic engagement and community service.",
+        "link": { "label": "Optimist International", "url": "https://www.optimist.org", "type": "external" }
+      },
+      {
+        "id": "oratorical",
+        "role": "Winner",
+        "roleColor": "#B8860B",
+        "event": "Regional Oratorical Contest — Area Winner",
+        "description": "Won the regional oratorical competition, demonstrating compelling public speaking on themes of civic duty and democratic values.",
+        "link": null
+      },
+      {
+        "id": "mock-trial",
+        "role": "Lead Counsel",
+        "roleColor": "#2C5282",
+        "event": "South Forsyth Mock Trial — Lead Attorney",
+        "description": "Served as lead attorney in SFHS Mock Trial competitions, arguing cases in a formal courtroom setting before judges.",
+        "link": null
+      },
+      {
+        "id": "ylf-speaker",
+        "role": "Presenter",
+        "roleColor": "#2C5282",
+        "event": "Youth Leadership Forsyth — Class Presentation",
+        "description": "Presented civic leadership projects and community proposals to Forsyth County stakeholders as part of the YLF program.",
+        "link": null
+      },
+      {
+        "id": "podcast",
+        "role": "Host",
+        "roleColor": "#800000",
+        "event": "Civic Youth Podcast — Spotify",
+        "description": "Hosts a Spotify podcast bringing youth perspectives on law, governance, and civic life to a broad audience.",
+        "link": { "label": "Listen on Spotify", "url": "https://open.spotify.com/show/4R1MPVZrdwkk1Sjd9lAWKG", "type": "external" }
+      }
+    ],
+    "skills": [
+      { "id": "speaking",      "icon": "🎙️", "label": "Public Speaking" },
+      { "id": "leadership",    "icon": "🏛️", "label": "Leadership" },
+      { "id": "legal",         "icon": "⚖️", "label": "Legal Research" },
+      { "id": "writing",       "icon": "✍️", "label": "Writing & Editing" },
+      { "id": "media",         "icon": "🎧", "label": "Media Production" },
+      { "id": "mentorship",    "icon": "🤝", "label": "Mentorship" },
+      { "id": "civic",         "icon": "🗳️", "label": "Civic Engagement" },
+      { "id": "research",      "icon": "🔍", "label": "Research & Analysis" }
+    ]
+  },
+  "achievements": {
+    "law": [
+      {
+        "id": "dar-essay",
+        "eyebrow": "National Winner",
+        "title": "DAR American History Essay Contest",
+        "description": "Awarded the national prize by the Daughters of the American Revolution for an essay exploring pivotal moments in American history — competing against thousands of students across the country.",
+        "detail": "This award recognized not just writing ability but a deep command of historical research and civic reasoning. The essay examined the intersection of revolutionary ideals and modern democratic principles, earning top marks at local, state, and national levels.",
+        "image": "/images/awards_and_certifications/Picture15.png",
+        "tags": ["Essay", "History", "National"]
+      },
+      {
+        "id": "ncss-prize",
+        "eyebrow": "National Winner",
+        "title": "NCSS 1787 Prize",
+        "description": "National Council for the Social Studies awarded Sanjana the 1787 Prize, recognizing outstanding scholarship in social studies and civic education at the national level.",
+        "detail": "The NCSS 1787 Prize is one of the most prestigious recognitions in social studies education for young scholars. Sanjana's work demonstrated an exceptional understanding of constitutional history, federalism, and its relevance to contemporary governance.",
+        "image": "/images/awards_and_certifications/Picture13.png",
+        "tags": ["Civics", "Constitution", "National"]
+      },
+      {
+        "id": "forsyth-news",
+        "eyebrow": "Press Coverage",
+        "title": "Forsyth County Schools — Global Recognition",
+        "description": "Featured in Forsyth County Schools news for earning global recognition in writing — a testament to academic excellence and civic voice that reached far beyond the classroom.",
+        "detail": "The Forsyth County Schools feature highlighted Sanjana's achievement as a student whose writing earned recognition at both national and international levels, bringing pride to her school community and inspiring her peers.",
+        "image": "/images/awards_and_certifications/Picture17.png",
+        "tags": ["Press", "Writing", "Recognition"]
+      }
+    ],
+    "leadership": [
+      {
+        "id": "joi-lt-governor",
+        "eyebrow": "Elected Role",
+        "title": "Junior Optimist International — Lt. Governor",
+        "description": "Elected as Lt. Governor for Junior Optimist International, leading district-level initiatives focused on youth empowerment, community service, and civic engagement.",
+        "detail": "As Lt. Governor, Sanjana coordinates with club chapters across the district, organizes events, and mentors younger members. This role demands strategic leadership, public communication, and the ability to mobilize youth around shared civic goals.",
+        "image": "/images/awards_and_certifications/Picture12.png",
+        "tags": ["Leadership", "Youth", "Elected"]
+      },
+      {
+        "id": "student-of-month",
+        "eyebrow": "Award",
+        "title": "Student of the Month — Optimist Club",
+        "description": "Recognized as Student of the Month by the Optimist Club for outstanding contributions to civic life, academic achievement, and community involvement.",
+        "detail": "This award reflects Sanjana's consistent dedication to excellence both inside and outside the classroom. The Optimist Club selects students who demonstrate exceptional character, leadership, and commitment to their community.",
+        "image": "/images/awards_and_certifications/Picture19.png",
+        "tags": ["Award", "Optimist", "Community"]
+      },
+      {
+        "id": "youth-leadership",
+        "eyebrow": "Certification",
+        "title": "Youth Leadership Forsyth — Class of 2025",
+        "description": "Completed the prestigious Youth Leadership Forsyth program (Class of 2025), a selective leadership development experience for emerging leaders in Forsyth County.",
+        "detail": "Youth Leadership Forsyth is a highly competitive program that selects students with exceptional potential for community impact. Sanjana's completion of this program underscores her commitment to servant leadership and civic responsibility.",
+        "image": "/images/awards_and_certifications/Picture20.png",
+        "tags": ["Leadership", "Forsyth", "Certification"]
+      }
+    ],
+    "civicTech": [
+      {
+        "id": "john-locke-essay",
+        "eyebrow": "Global Recognition",
+        "title": "John Locke Institute — Global Essay Prize",
+        "description": "Recognized at the prestigious John Locke Institute Global Essay Prize — one of the world's most competitive international essay competitions for students, drawing entries from over 80 countries.",
+        "detail": "The John Locke Institute Global Essay Prize challenges students to tackle complex philosophical, political, and economic questions at the highest academic level. Sanjana's recognition at this global stage reflects her exceptional depth of thinking, her command of argument, and her ability to engage with ideas that matter far beyond the classroom.",
+        "image": "/images/awards_and_certifications/Picture32.png",
+        "tags": ["Global", "Essay", "International"]
+      },
+      {
+        "id": "dar-ceremony",
+        "eyebrow": "Ceremony",
+        "title": "DAR Award Ceremony & Recognition",
+        "description": "Honored at a formal DAR award ceremony alongside distinguished officials, celebrating her national essay contest victory and commitment to preserving American history.",
+        "detail": "The DAR ceremony brought together community leaders, educators, and distinguished guests to celebrate student achievement in American history. Sanjana's presence at this event marked a proud milestone in her journey as a civic scholar.",
+        "image": "/images/awards_and_certifications/Picture14.png",
+        "tags": ["DAR", "Ceremony", "History"]
+      },
+      {
+        "id": "jfk-essay",
+        "eyebrow": "Essay Contest",
+        "title": "JFK Profile in Courage Essay Contest",
+        "description": "Selected as a participant in the prestigious JFK Profile in Courage Essay Contest — a national competition honoring students who write compellingly about political courage.",
+        "detail": "The JFK Profile in Courage Essay Contest is one of the most respected academic competitions in the country. Sanjana's participation reflects her ability to engage meaningfully with questions of moral leadership, democratic values, and the responsibilities of public service.",
+        "image": "/images/awards_and_certifications/Picture21.png",
+        "tags": ["JFK", "Essay", "National"]
+      }
+    ]
   }
 }

@@ -4,11 +4,11 @@ import { Menu, X } from 'lucide-react';
 
 const NAV_ITEMS = [
   { label: 'Home',               path: '/' },
-  { label: 'Arangetram',         path: '/arangetram' },
   { label: 'About',              path: '/about' },
   { label: 'Projects',           path: '/projects' },
   { label: 'Award & Gallery',    path: '/award-gallery' },
   { label: 'Writing & Speaking', path: '/writing-speaking' },
+  { label: 'Arangetram',         path: '/arangetram' },
   { label: 'Contact',            path: '/rsvp' },
 ];
 

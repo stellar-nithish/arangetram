@@ -4,12 +4,15 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 // Pages
-import Home        from './pages/Home';
-import About       from './pages/About';
-import Arangetram  from './pages/Arangetram';
-import GalleryPage from './pages/GalleryPage';
-import RSVPPage    from './pages/RSVPPage';
-import LifePhilosophy from './pages/LifePhilosophy';
+import Home              from './pages/Home';
+import About             from './pages/About';
+import Arangetram        from './pages/Arangetram';
+import GalleryPage       from './pages/GalleryPage';
+import RSVPPage          from './pages/RSVPPage';
+import LifePhilosophy    from './pages/LifePhilosophy';
+import Projects          from './pages/Projects';
+import AwardGallery      from './pages/AwardGallery';
+import WritingSpeaking   from './pages/WritingSpeaking';
 
 function App() {
   return (
@@ -17,12 +20,15 @@ function App() {
       <div className="font-sans w-full min-h-screen text-dark bg-accent selection:bg-primary selection:text-secondary">
         <Navbar />
         <Routes>
-          <Route path="/"           element={<Home />} />
-          <Route path="/about"      element={<About />} />
-          <Route path="/arangetram" element={<Arangetram />} />
-          <Route path="/gallery"    element={<GalleryPage />} />
-          <Route path="/rsvp"       element={<RSVPPage />} />
-          <Route path="/life-philosophy" element={<LifePhilosophy />} />
+          <Route path="/"                 element={<Home />} />
+          <Route path="/about"             element={<About />} />
+          <Route path="/arangetram"         element={<Arangetram />} />
+          <Route path="/gallery"            element={<GalleryPage />} />
+          <Route path="/rsvp"              element={<RSVPPage />} />
+          <Route path="/life-philosophy"   element={<LifePhilosophy />} />
+          <Route path="/projects"          element={<Projects />} />
+          <Route path="/award-gallery"     element={<AwardGallery />} />
+          <Route path="/writing-speaking"  element={<WritingSpeaking />} />
         </Routes>
         <Footer />
       </div>
