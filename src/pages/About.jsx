@@ -20,20 +20,20 @@ const fadeUp = {
 /* ── Icon mapping for highlights ── */
 const HIGHLIGHT_META = [
   {
-    icon: '⚖️',
-    description: 'Top-10 finish at State Mock Trial as Lead Attorney — mastering courtroom advocacy at an elite level.',
+    icon: '📜',
+    description: 'Awarded the prestigious DAR American History Essay Contest National High School Winner.',
   },
   {
     icon: '🏆',
-    description: 'Earned 4 National & International recognitions spanning leadership, civic service, and the arts.',
+    description: 'Recognized as the National Winner of the NCSS 1787 Prize for an exceptional essay on Reforms to Article III.',
   },
   {
     icon: '🏛️',
-    description: 'Junior Optimist International Lt. Governor — expanding youth civic engagement across the region.',
+    description: 'Junior Optimist International Lt. Governor — expanding youth civic engagement and community service across the region.',
   },
   {
     icon: '💻',
-    description: 'Passionate about leveraging technology and policy to modernize and improve local government services.',
+    description: 'Passionate about leveraging technology and modern policy to improve local government services.',
   },
 ];
 
@@ -197,7 +197,7 @@ const About = () => {
             align="center"
           />
 
-          <div className="relative mt-16">
+          <div className="relative mt-16 md:mt-24">
             {/* Center Line for desktop */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[4px] bg-[#800000]/10 -translate-x-1/2 rounded-full overflow-hidden">
                <motion.div 
@@ -207,27 +207,30 @@ const About = () => {
             </div>
             
             {/* Line for mobile */}
-            <div className="md:hidden absolute left-[3rem] top-0 bottom-0 w-[4px] bg-[#800000]/10 -translate-x-1/2 rounded-full overflow-hidden">
+            <div className="md:hidden absolute left-6 top-0 bottom-0 w-[4px] bg-[#800000]/10 -translate-x-1/2 rounded-full overflow-hidden">
                <motion.div 
                  className="absolute top-0 w-full bg-[#800000]"
                  style={{ height: lineHeight }}
                />
             </div>
 
-            <div className="space-y-16">
+            <div className="space-y-12 md:space-y-16">
               {TIMELINE_DATA.map((milestone, idx) => {
                 const isEven = idx % 2 === 0;
                 return (
                   <div key={idx} className="relative flex flex-col md:flex-row justify-between items-start md:items-center w-full group">
                     
                     {/* Timeline Node (Year) */}
-                    <div className="z-10 flex items-center justify-center bg-[#800000] text-[#FFD700] font-bold text-lg rounded-full w-16 h-16 md:w-20 md:h-20 shadow-lg border-4 border-white shrink-0 ml-4 md:ml-0 mb-4 md:mb-0 md:absolute md:left-1/2 md:-translate-x-1/2 md:top-1/2 md:-translate-y-1/2 group-hover:scale-110 transition-transform duration-300 md:order-2">
+                    <div className="z-10 flex items-center justify-center bg-[#800000] text-[#FFD700] font-bold text-sm md:text-lg rounded-full w-14 h-14 md:w-20 md:h-20 shadow-lg border-4 border-white shrink-0 absolute left-6 md:left-1/2 -translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 group-hover:scale-110 transition-transform duration-300 md:order-2">
                       {milestone.year}
                     </div>
 
+                    {/* Mobile connecting line for Content Box */}
+                    <div className="md:hidden absolute left-6 top-7 w-10 h-[2px] bg-[#800000]/20 z-0" />
+
                     {/* Content Box */}
                     <motion.div 
-                      className={`w-full md:w-[45%] pl-12 md:pl-0 mb-8 md:mb-0 ${isEven ? 'md:order-1' : 'md:order-3'}`}
+                      className={`w-full md:w-[45%] pl-16 md:pl-0 mb-8 md:mb-0 ${isEven ? 'md:order-1' : 'md:order-3'}`}
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, margin: '-60px' }}
@@ -250,7 +253,7 @@ const About = () => {
 
                     {/* Image Box */}
                     <motion.div 
-                      className={`w-full pl-12 md:pl-0 md:w-[45%] relative ${isEven ? 'md:order-3' : 'md:order-1'}`}
+                      className={`w-full pl-16 md:pl-0 md:w-[45%] relative ${isEven ? 'md:order-3' : 'md:order-1'}`}
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, margin: '-60px' }}
@@ -380,8 +383,10 @@ const About = () => {
       ══════════════════════════════════ */}
       <section id="about-philosophy" className="py-24 px-4 bg-white border-t border-[#800000]/5 relative overflow-hidden">
         {/* Background watermark icon */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[#F5F5DC]/50 text-[30rem] pointer-events-none select-none z-0">
-          ⚖️
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[#800000]/5 w-[16rem] md:w-[24rem] h-[16rem] md:h-[24rem] pointer-events-none select-none z-0">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+          </svg>
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="mb-8">

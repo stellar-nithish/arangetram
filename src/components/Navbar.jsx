@@ -3,11 +3,13 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const NAV_ITEMS = [
-  { label: 'Home',        path: '/' },
-  { label: 'Arangetram',  path: '/arangetram' },
-  { label: 'About',       path: '/about' },
-  { label: 'Gallery',     path: '/gallery' },
-  { label: 'RSVP',        path: '/rsvp' },
+  { label: 'Home',               path: '/' },
+  { label: 'Arangetram',         path: '/arangetram' },
+  { label: 'About',              path: '/about' },
+  { label: 'Projects',           path: '/projects' },
+  { label: 'Award & Gallery',    path: '/award-gallery' },
+  { label: 'Writing & Speaking', path: '/writing-speaking' },
+  { label: 'Contact',            path: '/rsvp' },
 ];
 
 const Navbar = () => {
