@@ -23,6 +23,13 @@ const Navbar = () => {
     setScrolled(window.scrollY > 60);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -43,6 +50,7 @@ const Navbar = () => {
           to="/"
           className="flex items-center gap-2 group"
           aria-label="Home"
+          onClick={scrollToTop}
         >
           <span className="text-[#FFD700] text-2xl select-none group-hover:rotate-12 transition-transform duration-300">✦</span>
           <span className="font-serif text-[#F5F5DC] text-xl font-bold tracking-wide leading-none">
@@ -59,6 +67,7 @@ const Navbar = () => {
                 to={path}
                 end={path === '/'}
                 id={`nav-${label.toLowerCase()}`}
+                onClick={scrollToTop}
                 className={({ isActive }) =>
                   `relative px-4 py-2 text-sm font-semibold uppercase tracking-widest transition-all duration-300
                    after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2
@@ -100,6 +109,7 @@ const Navbar = () => {
                 to={path}
                 end={path === '/'}
                 id={`nav-mobile-${label.toLowerCase()}`}
+                onClick={scrollToTop}
                 className={({ isActive }) =>
                   `flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-widest transition-all duration-200
                    ${isActive

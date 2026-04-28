@@ -5,7 +5,7 @@ const SocialLinks = ({ className = "" }) => {
   const { socials } = content;
 
   return (
-    <div className={`flex items-center gap-5 ${className}`}>
+    <div className={`flex items-center justify-center gap-5 ${className}`}>
       {socials.spotify && (
         <a 
           href={socials.spotify} 
