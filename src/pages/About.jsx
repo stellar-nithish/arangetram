@@ -176,7 +176,8 @@ const About = () => {
               <div className="absolute inset-0 translate-x-4 translate-y-4 rounded-2xl bg-[#FFD700]/40" />
               <img
                 src={images.about}
-                alt="Sanjana Diddige performing Bharatanatyam"
+                alt="Sanjana Diddige"
+                loading="lazy"
                 className="relative z-10 w-full h-auto rounded-2xl object-cover shadow-2xl"
               />
               {/* Maroon glow ring */}
@@ -189,7 +190,7 @@ const About = () => {
       {/* ══════════════════════════════════
           TIMELINE SECTION
       ══════════════════════════════════ */}
-      <section id="about-timeline" className="py-24 px-4 bg-gradient-to-b from-[#F5F5DC]/50 to-white overflow-hidden" ref={timelineRef}>
+      <section id="about-timeline" className="py-24 px-4 bg-gradient-to-b from-[#F5F5DC]/50 to-white overflow-x-hidden" ref={timelineRef}>
         <div className="max-w-5xl mx-auto">
           <SectionHeader
             eyebrow="My Journey"
@@ -207,7 +208,7 @@ const About = () => {
             </div>
             
             {/* Line for mobile */}
-            <div className="md:hidden absolute left-6 top-0 bottom-0 w-[4px] bg-[#800000]/10 -translate-x-1/2 rounded-full overflow-hidden">
+            <div className="md:hidden absolute left-8 top-0 bottom-0 w-[4px] bg-[#800000]/10 -translate-x-1/2 rounded-full overflow-hidden">
                <motion.div 
                  className="absolute top-0 w-full bg-[#800000]"
                  style={{ height: lineHeight }}
@@ -221,16 +222,16 @@ const About = () => {
                   <div key={idx} className="relative flex flex-col md:flex-row justify-between items-start md:items-center w-full group">
                     
                     {/* Timeline Node (Year) */}
-                    <div className="z-10 flex items-center justify-center bg-[#800000] text-[#FFD700] font-bold text-sm md:text-lg rounded-full w-14 h-14 md:w-20 md:h-20 shadow-lg border-4 border-white shrink-0 absolute left-6 md:left-1/2 -translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 group-hover:scale-110 transition-transform duration-300 md:order-2">
+                    <div className="z-10 flex items-center justify-center bg-[#800000] text-[#FFD700] font-bold text-sm md:text-lg rounded-full w-14 h-14 md:w-20 md:h-20 shadow-lg border-4 border-white shrink-0 absolute left-8 md:left-1/2 -translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 group-hover:scale-110 transition-transform duration-300 md:order-2">
                       {milestone.year}
                     </div>
 
                     {/* Mobile connecting line for Content Box */}
-                    <div className="md:hidden absolute left-6 top-7 w-10 h-[2px] bg-[#800000]/20 z-0" />
+                    <div className="md:hidden absolute left-8 top-7 w-10 h-[2px] bg-[#800000]/20 z-0" />
 
                     {/* Content Box */}
                     <motion.div 
-                      className={`w-full md:w-[45%] pl-16 md:pl-0 mb-8 md:mb-0 ${isEven ? 'md:order-1' : 'md:order-3'}`}
+                      className={`w-full md:w-[45%] pl-20 md:pl-0 mb-8 md:mb-0 ${isEven ? 'md:order-1' : 'md:order-3'}`}
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, margin: '-60px' }}
@@ -253,7 +254,7 @@ const About = () => {
 
                     {/* Image Box */}
                     <motion.div 
-                      className={`w-full pl-16 md:pl-0 md:w-[45%] relative ${isEven ? 'md:order-3' : 'md:order-1'}`}
+                      className={`w-full pl-20 md:pl-0 md:w-[45%] relative ${isEven ? 'md:order-3' : 'md:order-1'}`}
                       initial="hidden"
                       whileInView="visible"
                       viewport={{ once: true, margin: '-60px' }}
@@ -266,7 +267,8 @@ const About = () => {
                       <div className="relative w-full h-48 md:h-64 rounded-2xl overflow-hidden shadow-sm border-2 border-[#800000]/10 hover:shadow-md transition-shadow group-hover:border-[#800000]/30 duration-300">
                         <img 
                           src={milestone.image} 
-                          alt={`Timeline ${milestone.year}`} 
+                          alt={`Sanjana Diddige in ${milestone.year}`} 
+                          loading="lazy"
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                         />
                       </div>

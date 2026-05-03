@@ -196,7 +196,7 @@ export const galleryItems = [
     caption: 'Group event photo from a community recognition ceremony',
   },
   {
-    id: 'g-34', src: `${BASE}Picture34.png`, category: 'highlights',
+    id: 'g-34', src: `${BASE}Picture34.webp`, category: 'highlights',
     title: 'Award Presentation Moment',
     caption: 'Award presentation event with Sanjana and community members',
   },

@@ -70,7 +70,7 @@ const EventDetails = () => {
             {eventDetails.description}
           </p>
 
-          <div className="space-y-8 relative before:absolute before:inset-0 before:ml-4 before:-translate-x-px md:before:ml-6 md:before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary before:via-secondary before:to-transparent">
+          <div className="space-y-8 relative overflow-hidden before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:ml-6 md:before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-primary before:via-secondary before:to-transparent">
             {segments.map((segment, index) => (
               <div key={index} className="relative flex items-start justify-between">
                 <div className="absolute left-0 mt-1 md:mt-2 w-8 h-8 md:w-12 md:h-12 rounded-full border-4 border-accent bg-primary flex items-center justify-center shadow">

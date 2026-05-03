@@ -18,6 +18,7 @@ const About = () => {
               <img 
                 src={images.about} 
                 alt="Sanjana Diddige" 
+                loading="lazy"
                 className="relative z-10 w-full h-auto object-cover rounded-lg shadow-xl"
               />
               {/* Decorative element */}

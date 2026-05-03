@@ -22,7 +22,11 @@ const RSVP = () => {
     e.preventDefault();
     console.log("RSVP Submitted: ", formData);
     setSubmitted(true);
-    // Future API hook integration goes here
+    // Scroll to the top of the RSVP section to see the thank you message
+    const section = document.getElementById('rsvp');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -37,7 +41,7 @@ const RSVP = () => {
           <p className="text-accent/90">Please let us know if you can attend</p>
         </div>
 
-        <div className="p-8 md:p-12">
+        <div className="p-6 md:p-12">
           {submitted ? (
             <div className="text-center py-12">
               <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6 text-4xl">

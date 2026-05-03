@@ -53,14 +53,15 @@ const PageHero = () => (
 
     {/* Scroll cue */}
     <div className="absolute bottom-7 left-1/2 -translate-x-1/2 animate-bounce">
-      <svg
-        xmlns="http://www.w3.org/2000/svg" width="26" height="26"
-        viewBox="0 0 24 24" fill="none" stroke="#FFD700"
-        strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-        className="opacity-50"
-      >
-        <path d="m6 9 6 6 6-6" />
-      </svg>
+      <a href="#arangetram-content" className="text-[#FFD700]/50 hover:text-[#FFD700] transition-colors duration-300">
+        <svg
+          xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+        >
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </a>
     </div>
   </div>
 );
@@ -71,7 +72,9 @@ const Arangetram = () => {
     <main className="min-h-screen bg-[#F5F5DC]">
       <PageHero />
       <AnimateOnScroll>
-        <EventDetails />
+        <div id="arangetram-content">
+          <EventDetails />
+        </div>
       </AnimateOnScroll>
     </main>
   );
