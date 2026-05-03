@@ -7,10 +7,10 @@ import React from 'react';
  * @param {string} description – body text
  * @param {string} accent      – optional accent CSS color string
  */
-const HighlightCard = ({ icon, title, description, accent = '#800000' }) => (
+const HighlightCard = ({ icon, title, description, accent = 'var(--color-primary)' }) => (
   <article
     className="group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-xl
-               border border-[#F5F5DC] hover:border-[#FFD700]/60
+               border border-accent hover:border-secondary/60
                transition-all duration-300 overflow-hidden cursor-default"
   >
     {/* Subtle background glow on hover */}
@@ -35,7 +35,7 @@ const HighlightCard = ({ icon, title, description, accent = '#800000' }) => (
           {icon}
         </div>
       )}
-      <h3 className="font-serif text-lg font-bold text-[#2C1818] mb-2 group-hover:text-[#800000] transition-colors duration-200">
+      <h3 className="font-serif text-lg font-bold text-dark mb-2 group-hover:text-primary transition-colors duration-200">
         {title}
       </h3>
       {description && (

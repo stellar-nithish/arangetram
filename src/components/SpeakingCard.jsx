@@ -15,7 +15,7 @@ const SpeakingCard = ({ role, roleColor, event, description, link, index }) => (
     </div>
 
     {/* Card body */}
-    <div className="flex-1 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-[#FFD700]/30 p-5 transition-all duration-300 mb-4 hover:bg-white/15">
+    <div className="flex-1 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/10 hover:border-secondary/30 p-5 transition-all duration-300 mb-4 hover:bg-white/15">
       {/* Role badge */}
       <span
         className="inline-block px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest rounded-full text-white mb-2"
@@ -25,12 +25,12 @@ const SpeakingCard = ({ role, roleColor, event, description, link, index }) => (
       </span>
 
       {/* Event name */}
-      <h3 className="font-serif text-base font-bold text-[#F5F5DC] mb-1.5 leading-snug">
+      <h3 className="font-serif text-base font-bold text-accent mb-1.5 leading-snug">
         {event}
       </h3>
 
       {/* Description */}
-      <p className="text-[#F5F5DC]/65 text-sm leading-relaxed mb-3">
+      <p className="text-accent/65 text-sm leading-relaxed mb-3">
         {description}
       </p>
 
@@ -40,7 +40,7 @@ const SpeakingCard = ({ role, roleColor, event, description, link, index }) => (
           label={link.label}
           url={link.url}
           type={link.type}
-          accent="#FFD700"
+          accent='var(--color-secondary)'
         />
       )}
     </div>

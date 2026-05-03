@@ -7,12 +7,12 @@ import Footer from './components/Footer';
 import Home              from './pages/Home';
 import About             from './pages/About';
 import Arangetram        from './pages/Arangetram';
-import GalleryPage       from './pages/GalleryPage';
 import RSVPPage          from './pages/RSVPPage';
 import LifePhilosophy    from './pages/LifePhilosophy';
 import Projects          from './pages/Projects';
 import AwardGallery      from './pages/AwardGallery';
 import WritingSpeaking   from './pages/WritingSpeaking';
+import GuestbookPage     from './pages/GuestbookPage';
 
 function App() {
   return (
@@ -23,8 +23,8 @@ function App() {
           <Route path="/"                 element={<Home />} />
           <Route path="/about"             element={<About />} />
           <Route path="/arangetram"         element={<Arangetram />} />
-          <Route path="/gallery"            element={<GalleryPage />} />
           <Route path="/rsvp"              element={<RSVPPage />} />
+          <Route path="/guestbook"         element={<GuestbookPage />} />
           <Route path="/life-philosophy"   element={<LifePhilosophy />} />
           <Route path="/projects"          element={<Projects />} />
           <Route path="/award-gallery"     element={<AwardGallery />} />

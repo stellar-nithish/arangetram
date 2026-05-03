@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import SectionHeader from '../components/SectionHeader';
 import content from '../data/content.json';
 
@@ -77,54 +78,54 @@ const Tags = ({ tags, accent }) => (
 ════════════════════════════════════════════════ */
 const PageHero = () => (
   <div
-    className="relative w-full flex items-center justify-center overflow-hidden bg-[#2C1818]"
+    className="relative w-full flex items-center justify-center overflow-hidden bg-dark"
     style={{ minHeight: '100svh', paddingTop: '72px' }}
   >
     {/* Subtle dot-grid texture */}
     <div
       className="absolute inset-0 opacity-[0.12]"
       style={{
-        backgroundImage: `radial-gradient(circle, #FFD700 1px, transparent 1px)`,
+        backgroundImage: `radial-gradient(circle, var(--color-secondary) 1px, transparent 1px)`,
         backgroundSize: '36px 36px',
       }}
     />
     {/* Radial glow centre */}
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,rgba(128,0,0,0.35),transparent)]" />
     {/* Bottom fade into next section */}
-    <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#2C1818] to-transparent" />
+    <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-dark to-transparent" />
 
     <div className="relative z-10 text-center px-6 w-full max-w-4xl mx-auto py-20">
-      <span className="inline-block text-[#FFD700] font-semibold uppercase tracking-[0.3em] text-[11px] mb-6 opacity-80">
+      <span className="inline-block text-secondary font-semibold uppercase tracking-[0.3em] text-[11px] mb-6 opacity-80">
         ✦ &nbsp; Portfolio &nbsp; ✦
       </span>
 
-      <h1 className="font-serif font-bold text-[#F5F5DC] leading-[1.1] mb-6
+      <h1 className="font-serif font-bold text-accent leading-[1.1] mb-6
                      text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
         Achievements &amp;{' '}
         <span
-          className="text-[#FFD700]"
+          className="text-secondary"
           style={{ textShadow: '0 0 40px rgba(255,215,0,0.35)' }}
         >
           Leadership
         </span>
       </h1>
 
-      <p className="text-[#F5F5DC]/70 leading-relaxed mx-auto
+      <p className="text-accent/70 leading-relaxed mx-auto
                     text-sm sm:text-base md:text-lg max-w-lg sm:max-w-xl">
         National recognition, elected offices, artistic mastery, and civic
         innovation — shaped by purpose, driven by passion.
       </p>
 
       <div className="flex items-center justify-center gap-4 mt-10">
-        <span className="h-px w-12 sm:w-20 bg-[#FFD700]/30" />
-        <span className="text-[#FFD700] text-lg">✦</span>
-        <span className="h-px w-12 sm:w-20 bg-[#FFD700]/30" />
+        <span className="h-px w-12 sm:w-20 bg-secondary/30" />
+        <span className="text-secondary text-lg">✦</span>
+        <span className="h-px w-12 sm:w-20 bg-secondary/30" />
       </div>
     </div>
 
     {/* Scroll cue */}
     <div className="absolute bottom-7 left-1/2 -translate-x-1/2 animate-bounce">
-      <a href="#projects-content" className="text-[#FFD700]/50 hover:text-[#FFD700] transition-colors duration-300">
+      <a href="#projects-content" className="text-secondary/50 hover:text-secondary transition-colors duration-300">
         <svg
           xmlns="http://www.w3.org/2000/svg" width="26" height="26"
           viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -148,12 +149,12 @@ const StatsBanner = () => {
     { value: '∞',       label: 'Civic Passion' },
   ];
   return (
-    <div id="projects-content" className="bg-[#800000] py-8 px-4 overflow-x-hidden">
-      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center divide-x-0 md:divide-x divide-[#FFD700]/20">
+    <div id="projects-content" className="bg-primary py-8 px-4 overflow-x-hidden">
+      <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center divide-x-0 md:divide-x divide-secondary/20">
         {stats.map(({ value, label }) => (
           <div key={label} className="py-2">
-            <p className="font-serif text-3xl sm:text-4xl font-bold text-[#FFD700] mb-0.5">{value}</p>
-            <p className="text-[#F5F5DC]/70 text-[10px] uppercase tracking-widest font-semibold">{label}</p>
+            <p className="font-serif text-3xl sm:text-4xl font-bold text-secondary mb-0.5">{value}</p>
+            <p className="text-accent/70 text-[10px] uppercase tracking-widest font-semibold">{label}</p>
           </div>
         ))}
       </div>
@@ -168,11 +169,11 @@ const StatsBanner = () => {
 ════════════════════════════════════════════════ */
 const LawSection = ({ items }) => {
   const ref = useReveal();
-  const accent = '#800000';
+  const accent = 'var(--color-primary)';
   const [featured, ...rest] = items;
 
   return (
-    <section className="bg-[#F5F5DC] py-20 px-4">
+    <section id="government" className="bg-accent py-20 px-4">
       <div
         ref={ref}
         className="max-w-6xl mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
@@ -186,15 +187,15 @@ const LawSection = ({ items }) => {
         />
 
         {/* ── Featured horizontal card ── */}
-        <div className="group flex flex-col md:flex-row bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-[#F5F5DC] hover:border-[#FFD700]/50 overflow-hidden mb-8 transition-all duration-400" style={{ minHeight: '320px' }}>
-          <div className="relative md:w-[42%] shrink-0 h-64 md:h-auto overflow-hidden bg-[#2C1818]">
+        <div className="group flex flex-col md:flex-row bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-accent hover:border-secondary/50 overflow-hidden mb-8 transition-all duration-400" style={{ minHeight: '320px' }}>
+          <div className="relative md:w-[42%] shrink-0 h-64 md:h-auto overflow-hidden bg-dark">
             <img
               src={featured.image}
               alt={featured.title}
               loading="lazy"
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#2C1818]/20 hidden md:block" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-dark/20 hidden md:block" />
             <span
               className="absolute top-4 left-4 px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full text-white z-10"
               style={{ background: accent }}
@@ -205,7 +206,7 @@ const LawSection = ({ items }) => {
 
           <div className="flex-1 p-7 sm:p-10 flex flex-col justify-center">
             <div className="h-[3px] w-10 rounded-full mb-4 transition-all duration-300 group-hover:w-16" style={{ background: accent }} />
-            <h3 className="font-serif text-2xl md:text-3xl font-bold text-[#2C1818] mb-3 group-hover:text-[#800000] transition-colors">
+            <h3 className="font-serif text-2xl md:text-3xl font-bold text-dark mb-3 group-hover:text-primary transition-colors">
               {featured.title}
             </h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-5 max-w-lg">{featured.description}</p>
@@ -219,14 +220,14 @@ const LawSection = ({ items }) => {
           {rest.map((item) => (
             <div
               key={item.id}
-              className="group bg-white rounded-2xl shadow-md hover:shadow-xl border border-[#F5F5DC] hover:border-[#FFD700]/50 overflow-hidden transition-all duration-300"
+              className="group bg-white rounded-2xl shadow-md hover:shadow-xl border border-accent hover:border-secondary/50 overflow-hidden transition-all duration-300"
             >
-              <div className="relative h-48 overflow-hidden bg-[#2C1818]">
+              <div className="relative h-48 overflow-hidden bg-dark">
                 <img
                   src={item.image} alt={item.title} loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#2C1818]/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent" />
                 <span
                   className="absolute top-3 left-3 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full text-white"
                   style={{ background: accent }}
@@ -236,7 +237,7 @@ const LawSection = ({ items }) => {
               </div>
               <div className="p-6">
                 <div className="h-[2px] w-8 rounded-full mb-3 transition-all duration-300 group-hover:w-14" style={{ background: accent }} />
-                <h3 className="font-serif text-lg font-bold text-[#2C1818] mb-2 group-hover:text-[#800000] transition-colors">
+                <h3 className="font-serif text-lg font-bold text-dark mb-2 group-hover:text-primary transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">{item.description}</p>
@@ -258,10 +259,10 @@ const LawSection = ({ items }) => {
 ════════════════════════════════════════════════ */
 const LeadershipSection = ({ items }) => {
   const ref = useReveal();
-  const accent = '#B8860B';
+  const accent = 'var(--color-secondary)';
 
   return (
-    <section className="bg-white py-20 px-4">
+    <section id="community" className="bg-white py-20 px-4">
       <div
         ref={ref}
         className="max-w-5xl mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
@@ -282,15 +283,15 @@ const LeadershipSection = ({ items }) => {
                 key={item.id}
                 className={`group flex flex-col ${
                   flip ? 'md:flex-row-reverse' : 'md:flex-row'
-                } rounded-2xl shadow-md hover:shadow-xl border border-gray-100 hover:border-[#FFD700]/50 overflow-hidden transition-all duration-400 bg-white`}
+                } rounded-2xl shadow-md hover:shadow-xl border border-gray-100 hover:border-secondary/50 overflow-hidden transition-all duration-400 bg-white`}
               >
                 {/* Image */}
-                <div className="relative md:w-[40%] shrink-0 h-60 md:h-72 overflow-hidden bg-[#2C1818]">
+                <div className="relative md:w-[40%] shrink-0 h-60 md:h-72 overflow-hidden bg-dark">
                   <img
                     src={item.image} alt={item.title} loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2C1818]/55 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark/55 to-transparent" />
                   <span
                     className="absolute bottom-4 left-4 px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full text-white"
                     style={{ background: accent }}
@@ -310,7 +311,7 @@ const LeadershipSection = ({ items }) => {
                   </span>
 
                   <div className="h-[3px] w-10 rounded-full mb-4" style={{ background: accent }} />
-                  <h3 className="font-serif text-xl md:text-2xl font-bold text-[#2C1818] mb-3 group-hover:text-[#B8860B] transition-colors">
+                  <h3 className="font-serif text-xl md:text-2xl font-bold text-dark mb-3 group-hover:text-secondary transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4 max-w-sm">{item.description}</p>
@@ -337,7 +338,7 @@ const CivicTechSection = ({ items }) => {
   const [featured, ...rest] = items;
 
   return (
-    <section className="bg-[#2C1818] py-20 px-4">
+    <section id="civic-tech" className="bg-dark py-20 px-4">
       <div
         ref={ref}
         className="max-w-6xl mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out"
@@ -363,7 +364,7 @@ const CivicTechSection = ({ items }) => {
               className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-600 group-hover:scale-105"
             />
             {/* Dark gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0f]/95 via-[#2C1818]/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0f]/95 via-dark/60 to-transparent" />
             {/* Side accent glow */}
             <div className="absolute left-0 top-0 bottom-0 w-1 rounded-full" style={{ background: accent }} />
 
@@ -374,14 +375,14 @@ const CivicTechSection = ({ items }) => {
               >
                 {featured.eyebrow}
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#F5F5DC] mb-3">
+              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-accent mb-3">
                 {featured.title}
               </h3>
-              <p className="text-[#F5F5DC]/70 text-sm leading-relaxed mb-4 max-w-md">
+              <p className="text-accent/70 text-sm leading-relaxed mb-4 max-w-md">
                 {featured.description}
               </p>
-              <Tags tags={featured.tags} accent="#FFD700" />
-              {featured.detail && <ReadMore text={featured.detail} accent="#FFD700" />}
+              <Tags tags={featured.tags} accent='var(--color-secondary)' />
+              {featured.detail && <ReadMore text={featured.detail} accent='var(--color-secondary)' />}
             </div>
           </div>
 
@@ -397,11 +398,11 @@ const CivicTechSection = ({ items }) => {
                   src={item.image} alt={item.title} loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0f]/92 via-[#2C1818]/55 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f0f]/92 via-dark/55 to-transparent" />
                 {/* Side accent bar */}
                 <div
                   className="absolute right-0 top-0 bottom-0 w-[3px] rounded-full opacity-70"
-                  style={{ background: '#FFD700' }}
+                  style={{ background: 'var(--color-secondary)' }}
                 />
 
                 <div className="absolute inset-0 p-5 flex flex-col justify-end">
@@ -411,10 +412,10 @@ const CivicTechSection = ({ items }) => {
                   >
                     {item.eyebrow}
                   </span>
-                  <h3 className="font-serif text-base font-bold text-[#F5F5DC] mb-1">
+                  <h3 className="font-serif text-base font-bold text-accent mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-[#F5F5DC]/60 text-xs leading-relaxed line-clamp-2">
+                  <p className="text-accent/60 text-xs leading-relaxed line-clamp-2">
                     {item.description}
                   </p>
                 </div>
@@ -433,6 +434,21 @@ const CivicTechSection = ({ items }) => {
 ════════════════════════════════════════════════ */
 const Projects = () => {
   const { achievements } = content;
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   return (
     <>
@@ -443,11 +459,11 @@ const Projects = () => {
       <CivicTechSection  items={achievements.civicTech} />
 
       {/* ── CTA ── */}
-      <div className="bg-[#F5F5DC] py-16 px-4 text-center border-t border-[#FFD700]/20">
-        <p className="text-[#800000] font-semibold uppercase tracking-[0.25em] text-xs mb-3">
+      <div className="bg-accent py-16 px-4 text-center border-t border-secondary/20">
+        <p className="text-primary font-semibold uppercase tracking-[0.25em] text-xs mb-3">
           ✦ &nbsp; Let's Connect
         </p>
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#2C1818] mb-4">
+        <h2 className="font-serif text-3xl md:text-4xl font-bold text-dark mb-4">
           Want to collaborate or learn more?
         </h2>
         <p className="text-gray-600 mb-8 max-w-md mx-auto text-sm leading-relaxed">
@@ -455,7 +471,7 @@ const Projects = () => {
         </p>
         <a
           href="/rsvp"
-          className="inline-block bg-[#800000] hover:bg-[#9c1f1f] text-[#FFD700] px-8 py-3 rounded-lg font-semibold uppercase tracking-widest text-sm transition-all duration-300 hover:scale-105 shadow-lg"
+          className="inline-block bg-primary hover:bg-primary-light text-secondary px-8 py-3 rounded-lg font-semibold uppercase tracking-widest text-sm transition-all duration-300 hover:scale-105 shadow-lg"
         >
           Get in Touch
         </a>

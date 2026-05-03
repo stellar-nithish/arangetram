@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #800000; /* Maroon */
-  --color-primary-light: #9c1f1f;
-  --color-secondary: #FFD700; /* Gold */
-  --color-accent: #F5F5DC; /* Beige */
-  --color-dark: #2C1818;
+  --color-primary: #720000; /* Richer Deep Maroon */
+  --color-primary-light: #8B0000;
+  --color-secondary: #D4AF37; /* Metallic Gold */
+  --color-accent: #FAF9F6; /* Clean Cream/Off-white */
+  --color-dark: #1A0D0D;
   
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;

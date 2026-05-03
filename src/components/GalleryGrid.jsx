@@ -2,9 +2,9 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 /* ── Category badge colours ── */
 const BADGE = {
-  awards:     { bg: '#800000', text: '#FFD700' },
-  media:      { bg: '#2C5282', text: '#F5F5DC' },
-  highlights: { bg: '#B8860B', text: '#fff' },
+  awards:     { bg: 'var(--color-primary)', text: 'var(--color-secondary)' },
+  media:      { bg: '#2C5282', text: 'var(--color-accent)' },
+  highlights: { bg: 'var(--color-secondary)', text: '#fff' },
 };
 
 /* ─────────────────────────────────────────────
@@ -128,7 +128,7 @@ const GalleryCard = ({ item, index, onClick }) => {
   return (
     <div
       ref={ref}
-      className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl border border-white/10 hover:border-[#FFD700]/40"
+      className="group relative rounded-2xl overflow-hidden cursor-pointer shadow-md hover:shadow-2xl border border-white/10 hover:border-secondary/40"
       style={{
         opacity: 0,
         transform: 'translateY(20px)',

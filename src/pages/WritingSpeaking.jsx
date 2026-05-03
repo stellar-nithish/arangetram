@@ -32,41 +32,41 @@ const useReveal = () => {
 ════════════════════════════════════════════ */
 const PageHero = () => (
   <div
-    className="relative w-full flex items-center justify-center overflow-hidden bg-[#2C1818]"
+    className="relative w-full flex items-center justify-center overflow-hidden bg-dark"
     style={{ minHeight: '100svh', paddingTop: '72px' }}
   >
     <div
       className="absolute inset-0 opacity-[0.12]"
       style={{
-        backgroundImage: `radial-gradient(circle, #FFD700 1px, transparent 1px)`,
+        backgroundImage: `radial-gradient(circle, var(--color-secondary) 1px, transparent 1px)`,
         backgroundSize: '36px 36px',
       }}
     />
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,rgba(128,0,0,0.35),transparent)]" />
-    <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#2C1818] to-transparent" />
+    <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-dark to-transparent" />
 
     <div className="relative z-10 text-center px-6 w-full max-w-4xl mx-auto py-20">
-      <span className="inline-block text-[#FFD700] font-semibold uppercase tracking-[0.3em] text-[11px] mb-6 opacity-80">
+      <span className="inline-block text-secondary font-semibold uppercase tracking-[0.3em] text-[11px] mb-6 opacity-80">
         ✦ &nbsp; Voice &amp; Vision &nbsp; ✦
       </span>
-      <h1 className="font-serif font-bold text-[#F5F5DC] leading-[1.1] mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+      <h1 className="font-serif font-bold text-accent leading-[1.1] mb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
         Writing &amp;{' '}
-        <span className="text-[#FFD700]" style={{ textShadow: '0 0 40px rgba(255,215,0,0.35)' }}>
+        <span className="text-secondary" style={{ textShadow: '0 0 40px rgba(255,215,0,0.35)' }}>
           Speaking
         </span>
       </h1>
-      <p className="text-[#F5F5DC]/70 leading-relaxed mx-auto text-sm sm:text-base md:text-lg max-w-lg sm:max-w-xl">
+      <p className="text-accent/70 leading-relaxed mx-auto text-sm sm:text-base md:text-lg max-w-lg sm:max-w-xl">
         Exploring ideas in law, philosophy, and civic engagement through writing and public discourse.
       </p>
       <div className="flex items-center justify-center gap-4 mt-10">
-        <span className="h-px w-12 sm:w-20 bg-[#FFD700]/30" />
-        <span className="text-[#FFD700] text-lg">✦</span>
-        <span className="h-px w-12 sm:w-20 bg-[#FFD700]/30" />
+        <span className="h-px w-12 sm:w-20 bg-secondary/30" />
+        <span className="text-secondary text-lg">✦</span>
+        <span className="h-px w-12 sm:w-20 bg-secondary/30" />
       </div>
     </div>
 
     <div className="absolute bottom-7 left-1/2 -translate-x-1/2 animate-bounce">
-      <a href="#writing-content" className="text-[#FFD700]/50 hover:text-[#FFD700] transition-colors duration-300">
+      <a href="#writing-content" className="text-secondary/50 hover:text-secondary transition-colors duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="m6 9 6 6 6-6" />
         </svg>
@@ -86,12 +86,12 @@ const StatsRibbon = () => {
     { value: '80+', label: 'Countries Competed' },
   ];
   return (
-    <div id="writing-content" className="bg-[#800000] py-8 px-4 overflow-x-hidden">
+    <div id="writing-content" className="bg-primary py-8 px-4 overflow-x-hidden">
       <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
         {stats.map(({ value, label }) => (
           <div key={label}>
-            <p className="font-serif text-3xl sm:text-4xl font-bold text-[#FFD700] mb-0.5">{value}</p>
-            <p className="text-[#F5F5DC]/70 text-[10px] uppercase tracking-widest font-semibold">{label}</p>
+            <p className="font-serif text-3xl sm:text-4xl font-bold text-secondary mb-0.5">{value}</p>
+            <p className="text-accent/70 text-[10px] uppercase tracking-widest font-semibold">{label}</p>
           </div>
         ))}
       </div>
@@ -105,7 +105,7 @@ const StatsRibbon = () => {
 const EssaysSection = ({ essays }) => {
   const ref = useReveal();
   return (
-    <section className="bg-[#F5F5DC] py-20 px-4">
+    <section className="bg-accent py-20 px-4">
       <div ref={ref} className="max-w-6xl mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out">
         <SectionHeader
           eyebrow="Selected Works"
@@ -155,7 +155,7 @@ const PublicationsSection = ({ publications }) => {
 const SpeakingSection = ({ speaking }) => {
   const ref = useReveal();
   return (
-    <section className="bg-[#2C1818] py-20 px-4">
+    <section className="bg-dark py-20 px-4">
       <div ref={ref} className="max-w-3xl mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out">
         <SectionHeader
           eyebrow="Talks & Competitions"
@@ -180,7 +180,7 @@ const SpeakingSection = ({ speaking }) => {
 const SkillsSection = ({ skills }) => {
   const ref = useReveal();
   return (
-    <section className="bg-[#F5F5DC] py-20 px-4">
+    <section className="bg-accent py-20 px-4">
       <div ref={ref} className="max-w-4xl mx-auto opacity-0 translate-y-8 transition-all duration-700 ease-out">
         <SectionHeader
           eyebrow="Expertise"
@@ -215,9 +215,9 @@ const WritingSpeaking = () => {
       <SkillsSection skills={skills} />
 
       {/* CTA */}
-      <div className="bg-white py-14 px-4 text-center border-t border-[#FFD700]/20">
-        <p className="text-[#800000] font-semibold uppercase tracking-[0.25em] text-xs mb-3">✦ &nbsp; Connect</p>
-        <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#2C1818] mb-3">
+      <div className="bg-white py-14 px-4 text-center border-t border-secondary/20">
+        <p className="text-primary font-semibold uppercase tracking-[0.25em] text-xs mb-3">✦ &nbsp; Connect</p>
+        <h2 className="font-serif text-2xl md:text-3xl font-bold text-dark mb-3">
           Want to collaborate or follow the work?
         </h2>
         <p className="text-gray-500 text-sm mb-7 max-w-sm mx-auto leading-relaxed">
@@ -225,7 +225,7 @@ const WritingSpeaking = () => {
         </p>
         <a
           href="/rsvp"
-          className="inline-block bg-[#800000] hover:bg-[#9c1f1f] text-[#FFD700] px-7 py-3 rounded-lg font-semibold uppercase tracking-widest text-sm transition-all duration-300 hover:scale-105 shadow-md"
+          className="inline-block bg-primary hover:bg-primary-light text-secondary px-7 py-3 rounded-lg font-semibold uppercase tracking-widest text-sm transition-all duration-300 hover:scale-105 shadow-md"
         >
           Get in Touch
         </a>

@@ -16,54 +16,54 @@ const getCounts = (items) => {
 ════════════════════════════════════════════ */
 const PageHero = ({ totalCount }) => (
   <div
-    className="relative w-full flex items-center justify-center overflow-hidden bg-[#2C1818]"
+    className="relative w-full flex items-center justify-center overflow-hidden bg-dark"
     style={{ minHeight: '100svh', paddingTop: '72px' }}
   >
     {/* Dot-grid texture */}
     <div
       className="absolute inset-0 opacity-[0.12]"
       style={{
-        backgroundImage: `radial-gradient(circle, #FFD700 1px, transparent 1px)`,
+        backgroundImage: `radial-gradient(circle, var(--color-secondary) 1px, transparent 1px)`,
         backgroundSize: '36px 36px',
       }}
     />
     {/* Radial glow */}
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_40%,rgba(128,0,0,0.35),transparent)]" />
     {/* Bottom fade into content */}
-    <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#2C1818] to-transparent" />
+    <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-dark to-transparent" />
 
     <div className="relative z-10 text-center px-6 w-full max-w-4xl mx-auto py-20">
-      <span className="inline-block text-[#FFD700] font-semibold uppercase tracking-[0.3em] text-[11px] mb-6 opacity-80">
+      <span className="inline-block text-secondary font-semibold uppercase tracking-[0.3em] text-[11px] mb-6 opacity-80">
         ✦ &nbsp; Recognition &nbsp; ✦
       </span>
 
-      <h1 className="font-serif font-bold text-[#F5F5DC] leading-[1.1] mb-6
+      <h1 className="font-serif font-bold text-accent leading-[1.1] mb-6
                      text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
         Awards &amp;{' '}
         <span
-          className="text-[#FFD700]"
+          className="text-secondary"
           style={{ textShadow: '0 0 40px rgba(255,215,0,0.35)' }}
         >
           Media
         </span>
       </h1>
 
-      <p className="text-[#F5F5DC]/70 leading-relaxed mx-auto
+      <p className="text-accent/70 leading-relaxed mx-auto
                     text-sm sm:text-base md:text-lg max-w-lg sm:max-w-xl">
         A journey of recognition, achievements, and memorable moments —{' '}
         {totalCount} captured milestones.
       </p>
 
       <div className="flex items-center justify-center gap-4 mt-10">
-        <span className="h-px w-12 sm:w-20 bg-[#FFD700]/30" />
-        <span className="text-[#FFD700] text-lg">✦</span>
-        <span className="h-px w-12 sm:w-20 bg-[#FFD700]/30" />
+        <span className="h-px w-12 sm:w-20 bg-secondary/30" />
+        <span className="text-secondary text-lg">✦</span>
+        <span className="h-px w-12 sm:w-20 bg-secondary/30" />
       </div>
     </div>
 
     {/* Scroll cue */}
     <div className="absolute bottom-7 left-1/2 -translate-x-1/2 animate-bounce">
-      <a href="#gallery-content" className="text-[#FFD700]/50 hover:text-[#FFD700] transition-colors duration-300">
+      <a href="#gallery-content" className="text-secondary/50 hover:text-secondary transition-colors duration-300">
         <svg
           xmlns="http://www.w3.org/2000/svg" width="26" height="26"
           viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -91,14 +91,14 @@ const FilterTabs = ({ active, onChange, counts }) => (
           onClick={() => onChange(key)}
           className={`group relative flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold uppercase tracking-widest transition-all duration-250 ${
             isActive
-              ? 'bg-[#800000] text-[#FFD700] shadow-lg shadow-[#800000]/30'
-              : 'bg-white text-[#2C1818]/70 border border-[#2C1818]/10 hover:border-[#800000]/40 hover:text-[#800000]'
+              ? 'bg-primary text-secondary shadow-lg shadow-primary/30'
+              : 'bg-white text-dark/70 border border-dark/10 hover:border-primary/40 hover:text-primary'
           }`}
         >
           {label}
           <span
             className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[22px] text-center transition-colors ${
-              isActive ? 'bg-[#FFD700]/20 text-[#FFD700]' : 'bg-gray-100 text-gray-500 group-hover:bg-[#800000]/10 group-hover:text-[#800000]'
+              isActive ? 'bg-secondary/20 text-secondary' : 'bg-gray-100 text-gray-500 group-hover:bg-primary/10 group-hover:text-primary'
             }`}
           >
             {count}
@@ -129,7 +129,7 @@ const AwardGallery = () => {
       <PageHero totalCount={galleryItems.length} />
 
       {/* Main content */}
-      <div id="gallery-content" className="bg-[#F5F5DC] min-h-screen overflow-x-hidden">
+      <div id="gallery-content" className="bg-accent min-h-screen overflow-x-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-14 pb-20">
 
           {/* Filter Tabs */}
@@ -141,13 +141,13 @@ const AwardGallery = () => {
 
           {/* Active section label */}
           <div className="flex items-center gap-4 mb-7">
-            <div className="h-px flex-1 bg-[#2C1818]/10" />
-            <span className="text-[#800000] font-semibold uppercase tracking-[0.25em] text-[11px] whitespace-nowrap">
+            <div className="h-px flex-1 bg-dark/10" />
+            <span className="text-primary font-semibold uppercase tracking-[0.25em] text-[11px] whitespace-nowrap">
               ✦ &nbsp;
               {activeFilter === 'all' ? 'All Photos' : CATEGORIES.find(c => c.key === activeFilter)?.label}
               &nbsp; — {filtered.length} items
             </span>
-            <div className="h-px flex-1 bg-[#2C1818]/10" />
+            <div className="h-px flex-1 bg-dark/10" />
           </div>
 
           {/* Gallery Grid */}
@@ -157,11 +157,11 @@ const AwardGallery = () => {
       </div>
 
       {/* CTA footer */}
-      <div className="bg-white py-14 px-4 text-center border-t border-[#FFD700]/20">
-        <p className="text-[#800000] font-semibold uppercase tracking-[0.25em] text-xs mb-3">
+      <div className="bg-white py-14 px-4 text-center border-t border-secondary/20">
+        <p className="text-primary font-semibold uppercase tracking-[0.25em] text-xs mb-3">
           ✦ &nbsp; See More
         </p>
-        <h2 className="font-serif text-2xl md:text-3xl font-bold text-[#2C1818] mb-3">
+        <h2 className="font-serif text-2xl md:text-3xl font-bold text-dark mb-3">
           Explore Achievements &amp; Leadership
         </h2>
         <p className="text-gray-500 text-sm mb-7 max-w-sm mx-auto leading-relaxed">
@@ -169,7 +169,7 @@ const AwardGallery = () => {
         </p>
         <a
           href="/projects"
-          className="inline-block bg-[#800000] hover:bg-[#9c1f1f] text-[#FFD700] px-7 py-3 rounded-lg font-semibold uppercase tracking-widest text-sm transition-all duration-300 hover:scale-105 shadow-md"
+          className="inline-block bg-primary hover:bg-primary-light text-secondary px-7 py-3 rounded-lg font-semibold uppercase tracking-widest text-sm transition-all duration-300 hover:scale-105 shadow-md"
         >
           View Achievements Page
         </a>

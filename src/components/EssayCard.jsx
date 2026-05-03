@@ -2,20 +2,20 @@ import React from 'react';
 import LinkButton from './LinkButton';
 
 const EYEBROW_COLORS = {
-  'National Winner':    '#800000',
+  'National Winner':    'var(--color-primary)',
   'International':      '#2C5282',
-  'Award':              '#B8860B',
-  'Winner':             '#B8860B',
+  'Award':              'var(--color-secondary)',
+  'Winner':             'var(--color-secondary)',
   'Recognition':        '#4A6741',
   'National Participant': '#555',
 };
 
 const EssayCard = ({ eyebrow, title, description, tags, links }) => {
-  const accent = EYEBROW_COLORS[eyebrow] ?? '#800000';
+  const accent = EYEBROW_COLORS[eyebrow] ?? 'var(--color-primary)';
   const hasLinks = links?.length > 0;
 
   return (
-    <article className="group relative bg-white rounded-2xl shadow-md hover:shadow-xl border border-[#F5F5DC] hover:border-[#FFD700]/50 overflow-hidden transition-all duration-300 flex flex-col">
+    <article className="group relative bg-white rounded-2xl shadow-md hover:shadow-xl border border-accent hover:border-secondary/50 overflow-hidden transition-all duration-300 flex flex-col">
       {/* Top accent stripe */}
       <div className="h-1 w-full" style={{ background: `linear-gradient(90deg, ${accent}, ${accent}60)` }} />
 
@@ -29,7 +29,7 @@ const EssayCard = ({ eyebrow, title, description, tags, links }) => {
         </span>
 
         {/* Title */}
-        <h3 className="font-serif text-lg font-bold text-[#2C1818] mb-2 leading-snug group-hover:text-[#800000] transition-colors duration-200">
+        <h3 className="font-serif text-lg font-bold text-dark mb-2 leading-snug group-hover:text-primary transition-colors duration-200">
           {title}
         </h3>
 

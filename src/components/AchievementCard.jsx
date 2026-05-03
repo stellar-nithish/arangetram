@@ -16,13 +16,13 @@ const AchievementCard = ({
   title,
   description,
   detail,
-  accentColor = '#800000',
+  accentColor = 'var(--color-primary)',
   tags = [],
 }) => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <article className="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl border border-[#F5F5DC] hover:border-[#FFD700]/50 transition-all duration-400 overflow-hidden flex flex-col">
+    <article className="group relative bg-white rounded-2xl shadow-md hover:shadow-2xl border border-accent hover:border-secondary/50 transition-all duration-400 overflow-hidden flex flex-col">
 
       {/* ── Image ── */}
       {image && (
@@ -34,7 +34,7 @@ const AchievementCard = ({
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           {/* overlay gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#2C1818]/60 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent" />
 
           {/* Eyebrow badge pinned on image */}
           {eyebrow && (
@@ -56,7 +56,7 @@ const AchievementCard = ({
           style={{ background: accentColor }}
         />
 
-        <h3 className="font-serif text-lg font-bold text-[#2C1818] leading-snug mb-3 group-hover:text-[#800000] transition-colors duration-200">
+        <h3 className="font-serif text-lg font-bold text-dark leading-snug mb-3 group-hover:text-primary transition-colors duration-200">
           {title}
         </h3>
 
@@ -71,7 +71,7 @@ const AchievementCard = ({
               expanded ? 'max-h-96 opacity-100 mt-3' : 'max-h-0 opacity-0'
             }`}
           >
-            <div className="border-t border-[#F5F5DC] pt-3">
+            <div className="border-t border-accent pt-3">
               {detail}
             </div>
           </div>

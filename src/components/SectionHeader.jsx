@@ -15,18 +15,18 @@ const SectionHeader = ({ eyebrow, title, subtitle, align = 'center', theme = 'li
   return (
     <div className={`flex flex-col gap-3 mb-12 ${alignClass}`}>
       {eyebrow && (
-        <span className={`${isLight ? 'text-[#800000]' : 'text-[#FFD700]'} font-semibold uppercase tracking-[0.25em] text-xs`}>
+        <span className={`${isLight ? 'text-primary' : 'text-secondary'} font-semibold uppercase tracking-[0.25em] text-xs`}>
           {eyebrow}
         </span>
       )}
-      <h2 className={`font-serif text-4xl md:text-5xl font-bold ${isLight ? 'text-[#2C1818]' : 'text-[#F5F5DC]'} leading-tight`}>
+      <h2 className={`font-serif text-4xl md:text-5xl font-bold ${isLight ? 'text-dark' : 'text-accent'} leading-tight`}>
         {title}
       </h2>
       {/* Ornamental divider */}
       <div className={`flex items-center gap-3 mt-1 ${align === 'left' ? '' : 'justify-center'}`}>
-        <span className={`h-[2px] w-12 ${isLight ? 'bg-[#800000]' : 'bg-[#FFD700]/50'} rounded-full`} />
-        <span className="text-[#FFD700] text-lg">✦</span>
-        <span className={`h-[2px] w-12 ${isLight ? 'bg-[#800000]' : 'bg-[#FFD700]/50'} rounded-full`} />
+        <span className={`h-[2px] w-12 ${isLight ? 'bg-primary' : 'bg-secondary/50'} rounded-full`} />
+        <span className="text-secondary text-lg">✦</span>
+        <span className={`h-[2px] w-12 ${isLight ? 'bg-primary' : 'bg-secondary/50'} rounded-full`} />
       </div>
       {subtitle && (
         <p className={`${isLight ? 'text-gray-600' : 'text-gray-300'} text-lg leading-relaxed max-w-2xl mt-2`}>

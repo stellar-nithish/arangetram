@@ -32,7 +32,7 @@ const ICONS = {
   ),
 };
 
-const LinkButton = ({ label, url, type = 'external', accent = '#800000', size = 'sm' }) => {
+const LinkButton = ({ label, url, type = 'external', accent = 'var(--color-primary)', size = 'sm' }) => {
   const navigate = useNavigate();
 
   const padCls = size === 'md'
