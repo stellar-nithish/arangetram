@@ -6,7 +6,7 @@ import AnimateOnScroll from '../components/AnimateOnScroll';
 const RSVPPage = () => (
   <main className="min-h-screen bg-accent">
     <ImageSlider />
-    
+
     <div className="max-w-4xl mx-auto px-4 py-20 text-center">
       <AnimateOnScroll>
         <div className="flex items-center justify-center gap-4 mb-6">
