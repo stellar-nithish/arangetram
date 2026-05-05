@@ -132,7 +132,7 @@ const About = () => {
     <main id="about-page" className="min-h-screen bg-accent">
 
       {/* ══════════════════════════════════
-          HERO BAND
+          HERO BAND (About Me)
       ══════════════════════════════════ */}
       <section
         id="about-hero"
@@ -188,7 +188,179 @@ const About = () => {
       </section>
 
       {/* ══════════════════════════════════
-          TIMELINE SECTION
+          LIFE PHILOSOPHY SECTION
+      ══════════════════════════════════ */}
+      <section id="about-philosophy" className="py-24 px-4 bg-white border-t border-primary/5 relative overflow-hidden">
+        {/* Background watermark icon */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-primary/5 w-[16rem] md:w-[24rem] h-[16rem] md:h-[24rem] pointer-events-none select-none z-0">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+          </svg>
+        </div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="mb-8">
+            <h3 className="text-secondary font-bold uppercase tracking-widest text-sm mb-2">A Guiding Light</h3>
+            <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6 font-serif">Life Philosophy</h2>
+          </div>
+          <div className="mt-8">
+            <p className="text-gray-700 text-lg mb-8 max-w-2xl mx-auto">
+              Discover the motto that carried me through the toughest moments of my arangetram journey.
+            </p>
+            <Link
+              to="/life-philosophy"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-accent px-8 py-3 rounded-full font-semibold tracking-wide transition-colors duration-300"
+            >
+              Read Life Philosophy
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════
+          MY MISSION SECTION
+      ══════════════════════════════════ */}
+      <section id="about-mission" className="py-24 px-4 bg-accent relative overflow-hidden">
+        {/* Subtle background glow */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/3" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none translate-y-1/2 -translate-x-1/3" />
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <SectionHeader
+            eyebrow="My Purpose"
+            title="My Mission"
+            align="center"
+          />
+
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+            
+            {/* Core Mission Column */}
+            <motion.div
+              className="bg-white rounded-2xl p-8 lg:p-10 shadow-sm border border-primary/5 hover:shadow-md transition-shadow relative"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-60px' }}
+              variants={fadeUp}
+              custom={0.1}
+            >
+              <h3 className="font-serif text-3xl font-bold text-primary mb-8 border-b border-primary/10 pb-4">Core Mission</h3>
+              <ul className="space-y-6">
+                <li className="flex items-start gap-4">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-accent text-xl shrink-0 border border-primary/10 shadow-sm">🌍</span>
+                  <span className="text-gray-700 text-lg leading-snug pt-1">Expand youth civic engagement</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-accent text-xl shrink-0 border border-primary/10 shadow-sm">✨</span>
+                  <span className="text-gray-700 text-lg leading-snug pt-1">Lead with optimism, discipline, and service</span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-accent text-xl shrink-0 border border-primary/10 shadow-sm">💻</span>
+                  <span className="text-gray-700 text-lg leading-snug pt-1">Use tech + policy to improve local government services</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* By the Numbers Column */}
+            <motion.div
+              className="bg-white rounded-2xl p-8 lg:p-10 shadow-sm border border-primary/5 hover:shadow-md transition-shadow relative"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-60px' }}
+              variants={fadeUp}
+              custom={0.3}
+            >
+              <h3 className="font-serif text-3xl font-bold text-secondary mb-8 border-b border-secondary/20 pb-4">By the Numbers</h3>
+              <ul className="space-y-6">
+                <li className="flex items-start gap-4">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-accent text-xl shrink-0 border border-secondary/20 shadow-sm">📚</span>
+                  <span className="text-gray-700 text-lg leading-snug pt-1">
+                    <strong className="text-dark font-semibold">4.33 GPA</strong> (weighted)
+                  </span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-accent text-xl shrink-0 border border-secondary/20 shadow-sm">⚖️</span>
+                  <span className="text-gray-700 text-lg leading-snug pt-1">
+                    <strong className="text-dark font-semibold">2 Legal Internships</strong> (ongoing)
+                  </span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-accent text-xl shrink-0 border border-secondary/20 shadow-sm">🏛️</span>
+                  <span className="text-gray-700 text-lg leading-snug pt-1">
+                    <strong className="text-dark font-semibold">Top-10 State Mock Trial</strong> (Lead Attorney)
+                  </span>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-accent text-xl shrink-0 border border-secondary/20 shadow-sm">🏆</span>
+                  <span className="text-gray-700 text-lg leading-snug pt-1">
+                    <strong className="text-dark font-semibold">4 National/International</strong> Recognition
+                  </span>
+                </li>
+              </ul>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════
+          MY PASSION SECTION
+      ══════════════════════════════════ */}
+      <section id="about-passion" className="py-24 px-4 bg-gradient-to-b from-accent/40 to-white">
+        <div className="max-w-6xl mx-auto">
+          <SectionHeader
+            eyebrow="What I Do"
+            title="My Passion"
+            align="center"
+          />
+          
+          <div className="flex justify-center mb-12">
+            <div className="bg-dark text-secondary px-8 py-3 rounded-md font-semibold tracking-wide shadow-md">
+              Strategy, Impact and a Bit of Inspiration
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {PASSION_DATA.map((card, idx) => (
+              <motion.div
+                key={idx}
+                className="bg-accent rounded-2xl p-8 border border-primary/10 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: '-60px' }}
+                variants={fadeUp}
+                custom={idx * 0.15}
+              >
+                {/* Decorative subtle background elements */}
+                <div className="absolute -right-8 -top-8 w-24 h-24 bg-secondary/10 rounded-full blur-2xl pointer-events-none" />
+                
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center text-3xl shadow-sm mb-6 border border-primary/5">
+                    {card.icon}
+                  </div>
+                  
+                  <h3 className="font-serif text-2xl font-bold text-dark mb-4">
+                    {card.title}
+                  </h3>
+                  
+                  <div className="w-16 h-[2px] bg-primary/30 mb-6 rounded-full" />
+                  
+                  <ul className="text-left space-y-3 w-full">
+                    {card.items.map((item, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="text-primary text-xl mt-[-2px] leading-none">•</span>
+                        <span className="text-gray-700 leading-snug">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════
+          TIMELINE SECTION (My Journey So Far)
       ══════════════════════════════════ */}
       <section id="about-timeline" className="py-24 px-4 bg-gradient-to-b from-accent/50 to-white overflow-x-hidden" ref={timelineRef}>
         <div className="max-w-5xl mx-auto">
@@ -317,95 +489,6 @@ const About = () => {
                 />
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-      
-       
-
-      {/* ══════════════════════════════════
-          MY PASSION SECTION
-      ══════════════════════════════════ */}
-      <section id="about-passion" className="py-24 px-4 bg-gradient-to-b from-accent/40 to-white">
-        <div className="max-w-6xl mx-auto">
-          <SectionHeader
-            eyebrow="What I Do"
-            title="My Passion"
-            align="center"
-          />
-          
-          <div className="flex justify-center mb-12">
-            <div className="bg-dark text-secondary px-8 py-3 rounded-md font-semibold tracking-wide shadow-md">
-              Strategy, Impact and a Bit of Inspiration
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {PASSION_DATA.map((card, idx) => (
-              <motion.div
-                key={idx}
-                className="bg-accent rounded-2xl p-8 border border-primary/10 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: '-60px' }}
-                variants={fadeUp}
-                custom={idx * 0.15}
-              >
-                {/* Decorative subtle background elements */}
-                <div className="absolute -right-8 -top-8 w-24 h-24 bg-secondary/10 rounded-full blur-2xl pointer-events-none" />
-                
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center text-3xl shadow-sm mb-6 border border-primary/5">
-                    {card.icon}
-                  </div>
-                  
-                  <h3 className="font-serif text-2xl font-bold text-dark mb-4">
-                    {card.title}
-                  </h3>
-                  
-                  <div className="w-16 h-[2px] bg-primary/30 mb-6 rounded-full" />
-                  
-                  <ul className="text-left space-y-3 w-full">
-                    {card.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <span className="text-primary text-xl mt-[-2px] leading-none">•</span>
-                        <span className="text-gray-700 leading-snug">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ══════════════════════════════════
-          LIFE PHILOSOPHY SECTION
-      ══════════════════════════════════ */}
-      <section id="about-philosophy" className="py-24 px-4 bg-white border-t border-primary/5 relative overflow-hidden">
-        {/* Background watermark icon */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-primary/5 w-[16rem] md:w-[24rem] h-[16rem] md:h-[24rem] pointer-events-none select-none z-0">
-          <svg fill="currentColor" viewBox="0 0 24 24">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-          </svg>
-        </div>
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="mb-8">
-            <h3 className="text-secondary font-bold uppercase tracking-widest text-sm mb-2">A Guiding Light</h3>
-            <h2 className="text-4xl md:text-5xl font-bold text-dark mb-6 font-serif">Life Philosophy</h2>
-          </div>
-          <div className="mt-8">
-            <p className="text-gray-700 text-lg mb-8 max-w-2xl mx-auto">
-              Discover the motto that carried me through the toughest moments of my arangetram journey.
-            </p>
-            <Link
-              to="/life-philosophy"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="inline-block border-2 border-primary text-primary hover:bg-primary hover:text-accent px-8 py-3 rounded-full font-semibold tracking-wide transition-colors duration-300"
-            >
-              Read Life Philosophy
-            </Link>
           </div>
         </div>
       </section>

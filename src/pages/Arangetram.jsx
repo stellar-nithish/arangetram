@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import content from '../data/content.json';
 import EventDetails from '../components/EventDetails';
 import AnimateOnScroll from '../components/AnimateOnScroll';
@@ -76,6 +77,38 @@ const Arangetram = () => {
           <EventDetails />
         </div>
       </AnimateOnScroll>
+
+      {/* ── Invitation Section ── */}
+      <section id="invitation" className="py-20 px-4 bg-gradient-to-b from-accent to-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-primary font-semibold uppercase tracking-[0.3em] text-xs mb-3">
+            ✦ &nbsp; You're Invited &nbsp; ✦
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-dark mb-10">
+            Invitation
+          </h2>
+
+          <div className="inline-block w-full max-w-xl mx-auto">
+            <img
+              src="/images/Invitation.jpeg"
+              alt="Sanjana Diddige Arangetram Invitation"
+              loading="lazy"
+              className="w-full h-auto object-contain rounded-2xl shadow-2xl ring-1 ring-secondary/20"
+              style={{ boxShadow: '0 8px 48px rgba(128,0,0,0.15), 0 2px 12px rgba(0,0,0,0.12)' }}
+            />
+          </div>
+
+          <p className="mt-10 text-gray-600 text-sm leading-relaxed max-w-md mx-auto">
+            We joyfully invite you to witness this milestone celebration of devotion, artistry, and grace.
+          </p>
+          <Link
+            to="/rsvp#rsvp"
+            className="inline-block mt-6 bg-primary hover:bg-primary-light text-secondary px-8 py-3 rounded-lg font-semibold uppercase tracking-widest text-sm transition-all duration-300 hover:scale-105 shadow-lg"
+          >
+            RSVP Now
+          </Link>
+        </div>
+      </section>
     </main>
   );
 };

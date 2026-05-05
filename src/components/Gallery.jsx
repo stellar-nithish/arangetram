@@ -57,15 +57,15 @@ const Gallery = () => {
             <div 
               key={index} 
               onClick={() => setSelectedIndex(index)}
-              className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group cursor-pointer relative h-80"
+              className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group cursor-pointer relative bg-[#111] flex items-center justify-center h-80"
             >
               <img 
                 src={imgSrc} 
                 alt={`Sanjana Diddige - Gallery Image ${index + 1}`} 
                 loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-contain p-2 transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-colors duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/30 transition-colors duration-300 flex items-center justify-center rounded-lg">
                 <span className="text-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform scale-75 group-hover:scale-100">
                   <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/>

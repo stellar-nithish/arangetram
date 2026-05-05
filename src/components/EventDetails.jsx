@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import content from '../data/content.json';
 import { Calendar, Clock, MapPin } from 'lucide-react';
 
@@ -45,17 +46,20 @@ const EventDetails = () => {
                 <div>
                   <h3 className="uppercase tracking-wider text-sm font-semibold text-gray-500 mb-1">Venue</h3>
                   <p className="text-lg font-medium text-dark">{eventDetails.venue}</p>
+                  {eventDetails.venueAddress && (
+                    <p className="text-sm text-gray-500 mt-1">{eventDetails.venueAddress}</p>
+                  )}
                 </div>
               </div>
             </div>
 
             <div className="mt-10 pt-8 border-t border-gray-100">
-              <a 
-                href="#rsvp" 
+              <Link 
+                to="/rsvp#rsvp" 
                 className="block w-full py-3 text-center border-2 border-primary text-primary hover:bg-primary hover:text-white rounded transition-colors font-medium"
               >
-                Reserve Your Seat
-              </a>
+              RSVP
+              </Link>
             </div>
           </div>
         </div>

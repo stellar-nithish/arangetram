@@ -10,16 +10,16 @@ const NAV_ITEMS = [
     path: '/projects',
     subItems: [
       { label: 'All Projects', path: '/projects' },
-      { label: 'Government', path: '/projects#government' },
-      { label: 'Community Leadership', path: '/projects#community' },
-      { label: 'Civic Tech & Media', path: '/projects#civic-tech' }
+      { label: 'Government', path: '/projects#law-and-government' },
+      { label: 'Community Leadership', path: '/projects#community-leadership' },
+      { label: 'Civic Tech & Media', path: '/projects#civic-tech-and-media' }
     ]
   },
   { label: 'Award & Gallery',    path: '/award-gallery' },
   { label: 'Writing & Speaking', path: '/writing-speaking' },
   { label: 'Arangetram',         path: '/arangetram' },
   { label: 'Guestbook',          path: '/guestbook' },
-  { label: 'RSVP',               path: '/rsvp' },
+  { label: 'RSVP',               path: '/rsvp#rsvp' },
 ];
 
 const Navbar = () => {

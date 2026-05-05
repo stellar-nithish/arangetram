@@ -21,15 +21,20 @@
   "arangetram": {
     "eventDetails": {
       "title": "My Arangetram",
-      "date": "TBD - Coming Soon",
-      "time": "TBD",
-      "venue": "TBD",
-      "venueAddress": "",
+      "date": "Saturday, July 25, 2026",
+      "time": "2:00 PM",
+      "venue": "Gas South Theater",
+      "venueAddress": "6400 Sugarloaf Parkway, Duluth, Georgia 30097",
       "email": "sdiddige@gmail.com",
-      "seating": "TBD",
+      "seating": "1:30 PM",
       "dressCode": "Indian/Western Semi Formal",
-      "directionsUrl": "",
-      "additionalNotes": [],
+      "rsvpDeadline": "June 30, 2026",
+      "website": "www.sanjanadiddige.com",
+      "directionsUrl": "https://www.google.com/maps/search/?api=1&query=Gas+South+Theater+6400+Sugarloaf+Parkway+Duluth+GA+30097",
+      "additionalNotes": [
+        "Seating begins at 1:30 PM. Program starts promptly at 2:00 PM.",
+        "Please RSVP by June 30, 2026 at www.sanjanadiddige.com."
+      ],
       "description": "An Arangetram is not just the beginning of a solo journey in dance, but a devotion to the art form. This margam is an expression of poetry of the body, song of the soul, and spirit."
     },
     "segments": [
@@ -56,14 +61,14 @@
       "/images/photo_1.webp"
     ],
     "heroDesktop": "/images/photo_8.webp",
-    "about": "/images/photo_2.webp",
+    "about": "/images/sanjana-about.webp",
     "gallery": [
-      "/images/photo_3.webp",
-      "/images/photo_4.webp",
-      "/images/photo_5.webp",
-      "/images/photo_6.webp",
-      "/images/photo_7.webp",
-      "/images/photo_9.webp"
+      "/images/Sanjana-glimpse-01.webp",
+      "/images/Sanjana-glimpse-02.webp",
+      "/images/Sanjana-glimpse-03.webp",
+      "/images/Sanjana-glimpse-04.webp",
+      "/images/Sanjana-glimpse-05.webp",
+      "/images/photo_8.webp"
     ]
   },
   "socials": {

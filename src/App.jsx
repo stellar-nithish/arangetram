@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToHash from './components/ScrollToHash';
 
 // Pages
 import Home              from './pages/Home';
@@ -17,6 +18,7 @@ import GuestbookPage     from './pages/GuestbookPage';
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToHash />
       <div className="font-sans w-full min-h-screen text-dark bg-accent selection:bg-primary selection:text-secondary">
         <Navbar />
         <Routes>

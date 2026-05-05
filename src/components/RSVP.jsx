@@ -114,6 +114,13 @@ const RSVP = () => {
                 <p>{eventDetails.dressCode}</p>
               </div>
             )}
+
+            {eventDetails.rsvpDeadline && (
+              <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4">
+                <span className="text-[#D4AF37] font-semibold min-w-[100px]">RSVP By:</span>
+                <p className="font-semibold text-white">{eventDetails.rsvpDeadline}</p>
+              </div>
+            )}
           </div>
 
           {eventDetails.additionalNotes && eventDetails.additionalNotes.length > 0 && (

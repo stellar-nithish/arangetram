@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const heroImages = [
   "/images/photo_9.webp",
   "/images/photo_8.webp",
-  "/images/photo_2.webp"
+  "/images/photo_10.webp"
 ];
 
 const Hero = () => {
